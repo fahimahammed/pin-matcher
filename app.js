@@ -35,7 +35,7 @@ function generatePin(){
     document.getElementById('input-pin').value = '';
     displayElement('failed-msg', 'none');
     displayElement('success-msg', 'none');
-    displayElement('black-gen-pin', 'none');
+    displayElement('blank-gen-pin', 'none');
     limitedTry();
 }
 
@@ -63,12 +63,10 @@ function verifyPin(){
     const tryCount = document.getElementById('try-count');
 
     if(genPin == ''){
-        console.log('blank');
-        displayElement('black-gen-pin', 'block');
+        displayElement('blank-gen-pin', 'block');
     }
     else{
-        console.log('fill');
-        displayElement('black-gen-pin', 'none');
+        displayElement('blank-gen-pin', 'none');
         if(genPin == enteredPin){
             displayElement('success-msg', 'block');
             displayElement('failed-msg', 'none');
